@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
   toolbar: {
     paddingRight: 24, // keep right padding when drawer closed
     color: "#FFFFFF",
-    background: "linear-gradient(to right, #050505, #C90003)"
+    background: "linear-gradient(to right, #050505, #050505)"
   },
   toolbarIcon: {
     display: "flex",
@@ -220,12 +220,6 @@ const LoggedInLayout = ({ children }) => {
             noWrap
             className={classes.title}
           >
-           <img 
-            src={logo} 
-            alt="logo"
-            width="115px"
-            >
-            </img>
           </Typography>
           {user.id && <NotificationsPopOver />}
 

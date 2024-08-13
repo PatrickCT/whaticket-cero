@@ -1,0 +1,2 @@
+simepre instalar esta version en local
+npm install @types/lodash@4.17.5

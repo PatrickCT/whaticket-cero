@@ -60,7 +60,7 @@ export const initWbot = async (whatsapp: Whatsapp): Promise<Session> => {
           executablePath: process.env.CHROME_BIN || undefined,
           // @ts-ignore
           browserWSEndpoint: process.env.CHROME_WS || undefined,
-          args: args.split(" ")
+          args: ['--no-sandbox', '--disable-setuid-sandbox'],
         }
       });
 
