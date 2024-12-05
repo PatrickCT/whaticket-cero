@@ -598,6 +598,7 @@ const handleMessage = async (
   msg: WbotMessage,
   wbot: Session
 ): Promise<void> => {
+  // console.log('Handle msg: ', msg);
   if (!isValidMsg(msg)) {
     return;
   }
@@ -631,8 +632,11 @@ const handleMessage = async (
     }
 
     const chat = await msg.getChat();
+    // console.log('Chat from msg: ', chat);
 
-    if (chat.isGroup) {
+    if (chat.isGroup || chat.id.server.includes('g.us')) {
+      // console.log('skipping from group');
+
       /*      let msgGroupContact;
 
       if (msg.fromMe) {
